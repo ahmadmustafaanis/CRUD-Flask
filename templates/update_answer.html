@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Click on a Answer to Update it</h3>
+    {%for id, adesc, vote_count, user, isacep in ano|zip(adesc, vc, uid, isAccep)%}
+    <div class='container'>
+        <div class='bg-info p-4 rounded-lg m-4'>
+            <p><b>ANSWER ID: </b> {{id}}</p>
+            <p><b>ANSWER Description: </b>{{adesc}}</p>
+            <p><b>Vote Count </b>{{vote_count}}</p>
+            <p><b>Given by </b>{{user}}</p>
+            <p><b>Accepted </b>{{isacep}}</p>
+
+            <form action="" method="post">
+            <button type="submit" name="id" class="btn btn-outline-success" value={{id}} >Update Question</button>
+            </form>
+        </div>
+
+    </div>
+
+    {%endfor%}
+</body>
+</html>

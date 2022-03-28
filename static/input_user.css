@@ -1,0 +1,65 @@
+body{
+    background-color: darkslategray;
+}
+
+
+h1, h3{
+width: 50%;
+margin: auto;
+color: honeydew;
+}
+
+.form{
+    color: honeydew;
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+button{
+
+margin-top: 30px;
+margin-left: 180px;
+}
+
+
+
+label{
+    margin-top: 12px;   
+
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+input {
+    margin-top: 10px;   
+
+    float: left;
+}
+
+
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class='container'>
+        <h2>All QUESTIONS</h2>
+        {%for id, desc in qid|zip(qdesc)%}
+        <div class='bg-info p-4  m-4'>
+            
+            <h4 class='text-secondary'>Question ID:</h4> 
+            <p>{{id}}</p>
+
+            <h4 class='text-secondary'>Question Description:</h4>
+            <p>{{desc}}</p>
+            <form method="post">
+                 
+                <button  type="submit" value="{{id}}", name="qid" class='btn btn-light'> Delete </button>
+            </p>
+            </form>
+        </div>
+        {%endfor%}
+    </div>
+</body>
+</html>

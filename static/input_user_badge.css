@@ -1,0 +1,48 @@
+body{
+    background-color: darkslategray;
+    color: honeydew;
+}
+
+
+h3{
+    margin-left: 300px;
+}
+
+.user{
+    margin-top: 150px;
+}   
+
+select{
+    margin-left: 300px;
+    width: 30%;
+    height: 50px;
+    line-height: 60px;
+    float: left;
+}
+
+button{
+    margin-left: 440px;
+    margin-top: 20px;
+}
+
+.badge{
+    padding-top:20px;
+    margin-left: -10px;
+
+    width: 100%;
+}
+
+.wrong{
+    margin-left:-240px;
+}
+
+h2{
+    width: 100%;
+    margin-left:25%;
+    margin-top: 8%;
+    margin-bottom: -8%;
+}
+
+#badge_id{
+    font-size: 20px;
+}

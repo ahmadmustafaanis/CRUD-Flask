@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if messages=="Input for User" %}
+    <form method="POST" action="">
+        <center>
+
+        <h1>Input for New User</h1>
+
+        <H1>Enter your details </H1> <br>
+        First Name <input type = "text" name= "fname" /> <br>
+        Reputation <input type = "text" name = "rep" /> <br>
+        Number of Answers <input type = "text" name = "noa" /> <br>
+        Number of Questions <input type = "text" name = "noq" /> <br>
+
+        <input type = "submit">
+        </center>
+    </form>
+    {% elif messages=="Input for Questions" %}
+    <form method="POST" action="">
+        <center>
+        <H1>Enter The Details of the Question </H1> <br>
+        Question Details<input type = "text" name= "QuestionDescription" /> <br>
+
+        
+        <select name="user_details" id = "user_details">
+
+            {% for user, id in available_users_name|zip(available_users_id) %}
+                <option value="{{ id }}">{{ user }} with ID {{id}}</option>
+            {% endfor %}
+            
+        </select>
+        
+        {{messages}}
+        <input type = "submit">
+        </center>
+    </form>
+
+
+
+
+
+    {% elif messages=="Give ANSWER" %}
+    <form method="POST" action="">
+        <center>
+        <H1>CHOOSE ANY QUESTION TO GIVE ANSWER </H1> <br>
+
+        <select name="question_details" id = "question_details">
+
+            {% for question, id in questions_desc|zip(question_id) %}
+                <option value="{{ id }}">{{ question }} by USER with ID {{id}}</option>
+            {% endfor %}
+            
+        </select>
+
+        Answer Details<input type = "text" name= "AnswerDescription" /> <br>
+
+
+        <h1>SELECT YOUR USER ID AND NAME</h1>
+        
+        <select name="user_details" id = "user_details">
+
+            {% for user, id in available_users_name|zip(available_users_id) %}
+                <option value="{{ id }}">{{ user }} with ID {{id}}</option>
+            {% endfor %}
+            
+        </select>
+        
+        {{messages}}
+        <input type = "submit">
+        </center>
+    </form>
+
+
+
+
+
+    {% endif %}
+
+
+
+</body>
+</html>

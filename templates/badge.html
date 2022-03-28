@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='input_badge.css')}}">
+</head>
+<body>
+    
+    <H1>ADD NEW BADGE </H1> <br>
+    <form method="POST" action="">
+        
+        
+
+
+        <label for="desc">Badge Description</label>
+        <input type = "text" name= "desc" /> <br>
+
+        
+        <label for="name">Badge Name</label>
+        <input type = "text" name= "name" /> <br>
+
+        <label for="category">Badge Category</label>
+        <input type = "text" name= "category" /> <br>
+
+
+        
+        <button type = "submit" class="btn btn-dark">Submit </button>
+        
+    </form>
+</body>
+</html>

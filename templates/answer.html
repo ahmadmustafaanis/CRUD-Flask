@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='input_answer.css') }}">
+
+</head>
+<body>
+    <form method="POST" action="" >
+        <h2>Give new Answer</h2>
+    <label for="question_details">Choose Question</label>
+
+    <select class='question_select' name="question_details" id = "question_details" >
+
+        {% for question, id in questions_desc|zip(question_id) %}
+            <option value="{{ id }}">{{ question }} by USER with ID {{id}}</option>
+        {% endfor %}
+        
+    </select>
+
+    <br>
+
+    <label for="AnswerDescription">Write Answer</label>
+    <input class="form-control-sm" type = "text" name= "AnswerDescription" /> <br>
+
+
+    <label for="user_details"> Choose Your ID and Name</label>
+    
+    <select class='user_select' name="user_details" id = "user_details">
+
+        {% for user, id in available_users_name|zip(available_users_id) %}
+            <option value="{{ id }}">{{ user }} with ID {{id}}</option>
+        {% endfor %}
+        
+    </select>
+    <br>
+
+    <button type="submit" class="btn btn-dark">
+        Submit
+    </button>
+</form>
+</body>
+</html>

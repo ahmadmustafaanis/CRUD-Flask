@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='input_user_badge.css') }}">
+
+</head>
+<body>
+
+
+    <h2>Assign Badges to User</h2>
+    <form method="POST" action="">
+       
+        <div class='user'>
+
+        <h3>SELECT USER </h3> 
+
+
+        <select  name="user_id" id = "user_id">
+
+            {% for  id, user in user_id|zip(user_name) %}
+                <option value="{{ id }}">{{ user }} with ID {{id}}</option>
+            {% endfor %}
+            
+        </select>
+    </div>
+
+    <div class='badge'>
+        
+        <h3 class='wrong'> SELECT BADGE FOR USER </h3> 
+
+        <select  name="badge_id" id = "badge_id">
+
+            {% for  id, name in badge_id|zip(badge_name) %}
+                <option value="{{ id }}">{{ name }} </option>
+            {% endfor %}
+            
+        </select>
+
+    </div>
+
+        
+
+
+        <div class='submit'>
+        <button type = "submit" class="btn btn-light"> Submit </button>
+        </div>
+
+    </form>
+
+
+</body>
+</html>

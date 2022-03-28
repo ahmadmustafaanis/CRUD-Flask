@@ -1,0 +1,44 @@
+body{
+    background-color: darkslategray;
+}
+
+
+h1, h3{
+width: 50%;
+margin: auto;
+color: honeydew;
+}
+
+.form{
+    color: honeydew;
+    width: 100%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+button{
+
+margin-top: 30px;
+margin-left: 180px;
+} 
+
+
+
+.l1{  
+    width: 250px;
+    margin-left: 180px;
+} 
+
+
+input {
+    margin-top: 10px; 
+    margin-left: -50px;  
+} 
+
+select{
+    margin-top: 30px;
+    margin-left: -50px;
+    width: 22%; 
+    height:30px;
+    line-height:30px;
+}

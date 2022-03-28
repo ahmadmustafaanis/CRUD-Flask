@@ -1,0 +1,31 @@
+body{
+    background-color: darkslategray;
+    color: honeydew;
+}
+
+h1{
+    text-align: center;
+    margin-left:-80px;
+}
+
+input{
+    margin-top: 20px;
+    width: 50%;
+    float:left;
+}
+
+
+label{
+    margin-top: 20px;   
+
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+
+button{
+    margin-top: 100px;
+    margin-left: -420px;
+    
+}

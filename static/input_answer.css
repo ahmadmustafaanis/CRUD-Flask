@@ -1,0 +1,42 @@
+body{
+    background-color: darkslategray;
+    color: honeydew;
+}
+
+h1{
+    color:oldlace;
+    margin: auto;
+    width: 60%;
+    padding:10px;
+    margin-left: 25%;
+}
+input{
+    margin-top: 20px;
+    margin-left: 85px;
+    width: 70%;
+}
+
+form{
+    width: 60%;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+.user_select{
+    margin-top: 30px;
+    width: 70%; 
+    height:30px;
+    line-height:30px;
+}
+
+.question_select{
+    margin-left: 60px;
+    margin-top: 40px;
+    width: 70%;
+    height:30px;
+    line-height:30px;
+}
+
+button{
+    margin-top: 30px;
+}

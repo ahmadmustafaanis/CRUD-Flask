@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='indexpage.css') }}">
+
+
+</head>
+<body>   
+
+    
+        <h1>
+            Welcome TO STACK OVERFLOW
+        </h1>
+
+
+        
+        <h1>
+            CREATE OPERATIONS
+        </h1>
+        <a href="{{ url_for('add_user') }}" >
+            <button type="button" class="btn btn-light">
+                Add NEW USER
+            </button>
+        </a>
+        <a href="{{ url_for('insert_question') }}" >
+            <button type="button" class="btn btn-light"> 
+                Ask New Question
+            </button>
+        </a>
+        <a href="{{ url_for('give_answer') }}" >
+            <button type="button" class="btn btn-light"> 
+                Give an Answer
+            </button>
+        </a>
+        <a href="{{ url_for('add_badge') }}" >
+            <button type="button" class="btn btn-light"> 
+                Add New Badge
+            </button>   
+        </a>
+        <a href="{{ url_for('assign_badge') }}" >
+            <button type="button" class="btn btn-light"> 
+                Assign BADGE TO USER
+            </button>
+        </a>
+
+
+
+
+        
+        <h1>
+            READ OPERATIONS
+        </h1>
+
+
+        <a href="{{ url_for('badge_details') }}" >
+            <button type="button" class="btn btn-light"> 
+                All Badge Details
+            </button>
+        </a>
+        <a href="{{ url_for('user_details') }}" >
+            <button type="button" class="btn btn-light"> 
+                All Users Details
+            </button>
+        </a>
+        <a href="{{ url_for('read_questions') }}" >
+            <button type="button" class="btn btn-light"> 
+                All Questions Details
+            </button>
+        </a>
+        
+
+
+        <h1>
+            UPDATE OPERATIONS
+        </h1>
+
+        <a href="{{ url_for('update_user') }}" >
+            <button type="button" class="btn btn-light"> 
+                Update User
+            </button>
+        </a>
+        <a href="{{ url_for('get_badge_to_update') }}" >
+            <button type="button" class="btn btn-light"> 
+                Update Badge
+            </button>
+        </a>
+        <a href="{{ url_for('get_question_to_update') }}" >
+            <button type="button" class="btn btn-light"> 
+                Update Question
+            </button>
+        </a>
+        <a href="{{ url_for('get_answer_to_update') }}" >
+            <button type="button" class="btn btn-light"> 
+                Update Answer
+            </button>
+        </a>
+
+        <h1>
+            DELETE OPERATIONS
+</h1>
+
+
+        <a href="{{ url_for('get_user_to_del') }}" >
+            <button type="button" class="btn btn-light"> 
+                Delete User
+            </button></a>
+        
+
+        <a href="{{ url_for('get_ques_to_del') }}" >
+            <button type="button" class="btn btn-light"> 
+                Delete Question
+            </button>
+        </a>
+
+        <a href="{{ url_for('get_ans_to_del') }}" >
+            <button type="button" class="btn btn-light"> 
+                Delete Answer
+            </button>
+        </a>
+
+        <a href="{{ url_for('get_badge_to_del') }}" >
+            <button type="button" class="btn btn-light"> 
+                Delete Badge
+            </button>
+        </a>
+        
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+   
+
+    <div class='container'>
+
+    <h3 class='display-6'><u><p>QUESTION ID</u></p></h3>
+
+    <h3 class='display-6'>
+    <center>{{question_number}}</center>
+
+        <br>
+   <u> QUESTION STATEMENT</u>
+    </h3>
+  <h4 class='display-8'>
+      <div class='bg-info p-4 rounded-lg m-4'>
+    <center>{{question_desc}}</center>
+    </div>
+
+    </h4>
+
+    <h3 class='display-6'>
+        <u>All Answers</u>
+    </h3>
+    {%if answer%}
+    {% for aid, adesc  in answer_number|zip(answer_desc) %}
+    <div class='bg-secondary p-5 rounded-lg m-3'>
+    <p><b>ANSWER NUMBER</b> {{loop.index}}</p>
+
+    <p><b>Answer ID:</b> {{aid}}</p>
+    <p><b>Answer Description:</b></p>
+    <p>{{adesc}}</p>
+    </div>
+    {% endfor %}
+    {%else%}
+    <p>
+        <b>No Answers Yet</b>
+    </p>
+    {%endif%}
+    </div>
+   
+</body>
+</html>
